@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#res{
+    width: 80%;
+    /* height: 800px; */
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(320px,auto));
+    grid-gap: 30px;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+.card{
+    /* width: 30%; */
+    height: 320px;
+    background: green;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    position: relative;
+    box-shadow: 0 0 8px 0 #99969659;
+    transition: 1s all;
+}
+.card>div{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    border-radius: 10px;
+
+}
+.back{
+    background:white;
+    transform: rotateY(180deg);
+    box-sizing: border-box;
+    /* padding-left: 10px; */
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.front>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.card:hover{
+    transform: rotateY(-180deg);
+}
+.back>.text1{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.back>.text2{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.back>.text1>h1{
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+.back>.text2>h1{
+    width: 100%;
+    color: #7a7a7a;
+    line-height: 1.2;
+    letter-spacing: -2px;
+    font-size:27px;
+    text-align: center;
+}
+.back>.text1>i{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
+.back>.text2>i{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+}
